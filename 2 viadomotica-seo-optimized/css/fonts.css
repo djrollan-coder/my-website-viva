@@ -1,0 +1,58 @@
+/* ============================================================
+   VíaDomótica — fonts.css
+   Локальные шрифты из папки fonts/
+   Brigens Expanded — ТОЛЬКО логотип
+   Garet Book — весь текст
+   Garet Heavy — крупные заголовки
+   ============================================================ */
+
+/* ===== Brigens Expanded — логотип ===== */
+@font-face {
+    font-family: 'Brigens Expanded';
+    src: url('../fonts/brigendsexpanded-nrek1.otf') format('opentype');
+    font-display: block;
+}
+
+/* ===== Garet Book — текст ===== */
+@font-face {
+    font-family: 'Garet';
+    src: url('../fonts/Garet-Book.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+/* ===== Garet Heavy — крупные заголовки ===== */
+@font-face {
+    font-family: 'Garet Heavy';
+    src: url('../fonts/Garet-Heavy.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: block;
+}
+
+/* ---------- ЛОГОТИП (шапка) — Brigens ---------- */
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-img { height: 38px; width: auto; display: block; }
+.logo-text {
+    font-family: 'Brigens Expanded', Arial, sans-serif;
+    font-size: 1.1rem; letter-spacing: 1.5px;
+    text-transform: uppercase; white-space: nowrap;
+}
+
+/* ---------- ЛОГОТИП (футер) — Brigens ---------- */
+.footer-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Brigens Expanded', Arial, sans-serif;
+    letter-spacing: 1.5px; text-transform: uppercase;
+}
+.footer-logo-img { height: 36px; width: auto; }
+
+/* ---------- Весь текст — Garet ---------- */
+body, p, li, a, span, small, label, input, textarea, select, button, td, th,
+.hero-sub, .hero-subtitle, .section-subtitle, .top-contact, .nav-menu a,
+.service-card p, .service-list li, .sector-card p, .sector-benefits li,
+.process-step p, .why-card p, .das-features li, .das-ideal,
+.other-brand-list li, .brand-tag, .footer-links a, .footer-contact li, .footer-address {
+    font-family: 'Garet', Arial, sans-serif;
+}

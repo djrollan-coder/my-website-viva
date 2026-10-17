@@ -1,0 +1,11 @@
+# VíaDomótica
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+Sitemap: https://viadomotica.com/sitemap.xml
