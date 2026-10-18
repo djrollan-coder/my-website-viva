@@ -240,6 +240,13 @@ if ('scrollRestoration' in history) {
                 ru: 'Здравствуйте, VíaDomótica! Меня зовут ' + (n || '—') + (p ? '\nТелефон: ' + p : '') + '\nУслуга: ' + t + (m ? '\nСообщение: ' + m : '')
             };
 
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'contact_form_submit',
+                lead_method: 'whatsapp_form',
+                lead_service: t
+            });
+
             window.open(
                 'https://wa.me/34624345153?text=' + encodeURIComponent(texts[lang] || texts.es),
                 '_blank'
