@@ -61,6 +61,12 @@ if ('scrollRestoration' in history) {
 
         var ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl && data.canonical) ogUrl.setAttribute('content', data.canonical);
+
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle && data.title) ogTitle.setAttribute('content', data.title);
+
+        var ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc && data.description) ogDesc.setAttribute('content', data.description);
     }
 
     function closeMobileMenu() {

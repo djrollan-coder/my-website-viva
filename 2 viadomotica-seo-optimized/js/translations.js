@@ -14,6 +14,10 @@ var translations = {
 "nav.contact": "Contacto",
 
         "hero.heading": "SONIDO PARA ESPACIOS",
+        "seo.h1Home": "Instalación de sonido ambiental en Alicante",
+        "seo.h1Services": "Sonorización comercial en Alicante",
+        "seo.h1Projects": "Proyectos de sonorización en Alicante",
+        "seo.h1Contact": "Presupuesto de sonido ambiental en Alicante",
         "hero.titleMain": "Instalación de sistemas de música ambiental 70V/100V",
         "hero.titleSub": "y altavoces de techo para restaurantes, centros comerciales y gimnasios",
         "hero.subtitle": "Sistemas de audio profesional para espacios comerciales",
@@ -257,6 +261,10 @@ var translations = {
 "nav.contact": "Contact",
 
         "hero.heading": "SOUND FOR SPACES",
+        "seo.h1Home": "Ambient sound installation in Alicante",
+        "seo.h1Services": "Commercial sound systems in Alicante",
+        "seo.h1Projects": "Sound installation projects in Alicante",
+        "seo.h1Contact": "Ambient sound quote in Alicante",
         "hero.titleMain": "70V/100V Background Music System Installation",
         "hero.titleSub": "and ceiling speakers for restaurants, shopping centres and gyms",
         "hero.subtitle": "Professional commercial audio systems",
@@ -500,6 +508,10 @@ var translations = {
 "nav.contact": "Контакты",
 
         "hero.heading": "ЗВУК ДЛЯ ПРОСТРАНСТВ",
+        "seo.h1Home": "Установка фонового звука в Аликанте",
+        "seo.h1Services": "Озвучивание коммерческих помещений в Аликанте",
+        "seo.h1Projects": "Проекты озвучивания в Аликанте",
+        "seo.h1Contact": "Расчёт фонового звука в Аликанте",
         "hero.titleMain": "Установка систем фоновой музыки 70V/100V",
         "hero.titleSub": "и потолочных динамиков для ресторанов, торговых центров и спортзалов",
         "hero.subtitle": "Профессиональные аудиосистемы для коммерческих пространств",

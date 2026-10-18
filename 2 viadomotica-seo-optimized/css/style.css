@@ -1123,3 +1123,21 @@ body {
     .nav-icons > a { display: none; }
     .footer-content { grid-template-columns: minmax(0, 1fr); }
 }
+
+
+/* SEO kicker line inside H1 */
+h1 .h1-kicker {
+    display: block;
+    font-family: 'Garet', Arial, sans-serif;
+    font-size: .95rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7dd3fc;
+    margin-bottom: 14px;
+}
+
+@media (max-width: 768px) {
+    h1 .h1-kicker { font-size: .72rem; letter-spacing: 1.5px; margin-bottom: 10px; }
+}
