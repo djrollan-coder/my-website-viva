@@ -135,7 +135,7 @@ h1, h2, h3, h4 { line-height: 1.25; }
 .service-warranty p { margin: 0; color: #cbd5e1; font-size: .95rem; }
 
 /* Секторы */
-.sectors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+.sectors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 30px; }
 .sector-card { background: var(--dark-2); border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,.08); transition: .3s; }
 .sector-card:hover { transform: none; box-shadow: var(--shadow-lg); }
 .sector-content { padding: 26px; }
@@ -892,7 +892,8 @@ body {
     .nav-menu > li:nth-child(1) > a,
     .nav-menu > li:nth-child(2) > a,
     .nav-menu > li:nth-child(3) > a,
-    .nav-menu > li:nth-child(4) > a {
+    .nav-menu > li:nth-child(4) > a,
+    .nav-menu > li:nth-child(5) > a {
         display: block;
         width: 92px;
         padding-left: 6px;
@@ -1140,4 +1141,91 @@ h1 .h1-kicker {
 
 @media (max-width: 768px) {
     h1 .h1-kicker { font-size: .72rem; letter-spacing: 1.5px; margin-bottom: 10px; }
+}
+
+
+/* ============================================================
+   BLOG, ARTICLES, MADRID LANDING
+   ============================================================ */
+.breadcrumbs { font-size: .82rem; color: #cbd5e1; margin-bottom: 18px; letter-spacing: .5px; }
+.breadcrumbs a { color: #e2e8f0; }
+.breadcrumbs a:hover { color: #7dd3fc; }
+.breadcrumbs span { margin: 0 4px; color: #94a3b8; }
+.breadcrumbs span[aria-current] { margin: 0; color: #cbd5e1; }
+.article-hero h1 { max-width: 900px; margin-left: auto; margin-right: auto; }
+.article-hero p { max-width: 720px; margin-left: auto; margin-right: auto; }
+.article-hero .article-meta { margin-top: 14px; font-size: .85rem; color: #94a3b8; }
+
+.article-section { padding-top: 64px; }
+.article-body { max-width: 780px; margin: 0 auto; font-size: 1.04rem; line-height: 1.85; color: var(--text); }
+.article-body h2 { color: var(--dark); font-size: 1.6rem; margin: 46px 0 14px; }
+.article-body h3 { color: var(--dark); font-size: 1.18rem; margin: 28px 0 8px; }
+.article-body p { margin: 0 0 18px; }
+.article-body ul, .article-body ol { margin: 0 0 20px; padding-left: 22px; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li { margin-bottom: 8px; padding-left: 4px; }
+.article-body li::marker { color: var(--primary); }
+.article-body a { color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+.article-body a:hover { color: var(--primary); }
+.article-body strong { color: var(--dark); }
+.article-note { background: #f0f9ff; border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 16px 20px; }
+
+.article-table-wrap { overflow-x: auto; margin: 0 0 22px; border: 1px solid #e2e8f0; border-radius: 10px; }
+.article-table { width: 100%; border-collapse: collapse; font-size: .93rem; min-width: 520px; }
+.article-table th, .article-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+.article-table thead th { background: var(--dark); color: #fff; font-weight: 400; }
+.article-table tbody tr:last-child td { border-bottom: none; }
+.article-table td:first-child { color: var(--dark); font-weight: 600; }
+
+.faq-list { display: grid; gap: 12px; margin-bottom: 10px; }
+.faq-item { border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; padding: 0 20px; }
+.faq-item summary { cursor: pointer; padding: 16px 0; color: var(--dark); font-weight: 600; list-style: none; position: relative; padding-right: 28px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; position: absolute; right: 0; top: 13px; font-size: 1.3rem; color: var(--primary); }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { margin: 0 0 16px; }
+
+.article-cta { max-width: 780px; margin: 50px auto 0; background: linear-gradient(135deg, #0c4a6e, var(--dark)); border-radius: var(--radius); padding: 36px 32px; text-align: center; }
+.article-cta h2 { color: #fff; font-size: 1.5rem; margin-bottom: 10px; }
+.article-cta p { color: #cbd5e1; margin-bottom: 24px; }
+.article-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.article-cta-buttons .btn { display: inline-flex; align-items: center; gap: 10px; }
+
+.article-related { margin-top: 70px; }
+.article-related > h2 { text-align: center; color: var(--dark); font-size: 1.7rem; margin-bottom: 28px; }
+
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 26px; }
+.blog-card { display: flex; flex-direction: column; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); overflow: hidden; transition: border-color .25s, box-shadow .25s; }
+.blog-card:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); }
+.blog-card-img { aspect-ratio: 16 / 10; overflow: hidden; background: var(--dark-2); }
+.blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.blog-card-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.blog-card-kicker { font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--primary-dark); margin-bottom: 8px; }
+.blog-card h3 { color: var(--dark); font-size: 1.15rem; margin-bottom: 10px; }
+.blog-card p { font-size: .92rem; color: var(--text-light); margin-bottom: 16px; flex: 1; }
+.blog-card-more { color: var(--primary-dark); font-size: .9rem; }
+
+@media (max-width: 768px) {
+    .article-section { padding-top: 40px; }
+    .article-body { font-size: 1rem; line-height: 1.8; }
+    .article-body h2 { font-size: 1.35rem; margin-top: 36px; }
+    .article-cta { padding: 28px 20px; margin-top: 40px; }
+    .article-cta-buttons .btn { width: 100%; justify-content: center; }
+    .article-related { margin-top: 50px; }
+    .breadcrumbs { font-size: .75rem; }
+}
+
+@media (max-width: 768px) {
+    .article-hero p { font-size: .98rem; }
+}
+
+/* Card thumbnails render immediately (no content-visibility pop-in) */
+.blog-card-img img { content-visibility: visible; }
+
+/* Very narrow phones: long uppercase words in big hero titles */
+@media (max-width: 360px) {
+    .projects-hero h1,
+    .contact-hero h1,
+    .services-hero h1 { font-size: 2.4rem; }
 }

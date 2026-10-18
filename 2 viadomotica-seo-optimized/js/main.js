@@ -26,7 +26,9 @@ if ('scrollRestoration' in history) {
         }
 
         var file = basename(location.pathname);
-        return VALID_PAGES.indexOf(file) !== -1 ? file : 'index.html';
+        if (file === '' || file === 'index.html') return 'index.html';
+        // Standalone pages (blog, articles, Madrid) are not swappable fragments
+        return VALID_PAGES.indexOf(file) !== -1 ? file : null;
     }
 
     function getPageFromHref(href) {
@@ -41,9 +43,12 @@ if ('scrollRestoration' in history) {
     }
 
     function updateActiveNav(page) {
+        var standaloneActive = document.body.getAttribute('data-nav-active');
         document.querySelectorAll('.nav-menu a[href]').forEach(function (link) {
-            var linkPage = getPageFromHref(link.getAttribute('href'));
-            link.classList.toggle('active', linkPage === page);
+            var isActive = page
+                ? getPageFromHref(link.getAttribute('href')) === page
+                : link.getAttribute('href') === standaloneActive;
+            link.classList.toggle('active', isActive);
         });
     }
 
@@ -363,6 +368,8 @@ if ('scrollRestoration' in history) {
 
         if (VALID_PAGES.indexOf(page) !== -1) {
             renderPage(page);
+        } else {
+            location.reload();
         }
     });
 
