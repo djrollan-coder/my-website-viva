@@ -1085,3 +1085,41 @@ body {
         transform: none;
     }
 }
+
+
+/* ============================================================
+   MOBILE FIXES: header fits the screen, footer without overflow
+   ============================================================ */
+@media (max-width: 1024px) {
+    .nav-container > .logo { order: 1; min-width: 0; margin-right: auto; }
+    .nav-container > .nav-icons { order: 2; }
+    .nav-container > .menu-toggle { order: 3; margin-right: -8px; }
+}
+
+@media (max-width: 768px) {
+    .navbar .container { padding: 0 16px; }
+    .nav-container { gap: 10px; }
+    .logo { gap: 8px; }
+    .logo-img { height: 30px; }
+    .logo-text { font-size: .82rem; letter-spacing: 1px; }
+    .nav-icons { gap: 10px; }
+    .nav-icons > a { font-size: 1.05rem; }
+
+    .footer { padding-top: 50px; }
+    .footer-content {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+        padding-bottom: 36px;
+    }
+    .footer-content .footer-section:first-child,
+    .footer-content .footer-section:nth-child(4) { grid-column: 1 / -1; }
+    .footer-section { min-width: 0; overflow-wrap: break-word; }
+    .footer-bottom { padding-bottom: 84px; }
+    .back-to-top { right: 16px; bottom: 16px; width: 46px; height: 46px; }
+}
+
+@media (max-width: 360px) {
+    .nav-icons > a { display: none; }
+    .footer-content { grid-template-columns: minmax(0, 1fr); }
+}
