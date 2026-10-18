@@ -8,4 +8,4 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /images/
 
-Sitemap: https://viadomotica.com/sitemap.xml
+Sitemap: https://www.viadomotica.com/sitemap.xml
